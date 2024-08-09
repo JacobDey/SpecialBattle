@@ -10,8 +10,8 @@
   "name":"bigRock",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"LegacyObjects",
+    "path":"folders/Objects/LegacyObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
