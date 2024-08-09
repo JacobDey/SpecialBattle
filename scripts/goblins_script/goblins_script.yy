@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"goblins_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"goblins_script",
+  "parent":{
+    "name":"Sets",
+    "path":"folders/Scripts/Sets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
