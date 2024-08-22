@@ -8,6 +8,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "Infantry",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 10,
             "attack_speed": 1,
             "attack_damage": 10,
@@ -28,6 +29,7 @@
             "attribute_2": "Infantry",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 15,
             "attack_speed": 0.9,
             "attack_damage": 15,
@@ -48,6 +50,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 10,
             "attack_speed": 2,
             "attack_damage": 1,
@@ -70,6 +73,7 @@
             "attribute_2": "Ruler",
             "attribute_3": "",
             "rarity": "U",
+            "draftable": true,
             "energy_cost": 30,
             "attack_speed": 0.5,
             "special_attack_damage": 0,
@@ -91,6 +95,7 @@
             "attribute_2": "",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 15,
             "attack_speed": 1,
             "special_attack_damage": 0,
@@ -112,6 +117,7 @@
             "attribute_2": "Madman",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 10,
             "attack_speed": 1,
             "attack_damage": 5,
@@ -133,6 +139,7 @@
             "attribute_2": "",
             "attribute_3": "",
             "rarity": "R",
+            "draftable": true,
             "energy_cost": 30,
             "attack_speed": 1,
             "special_attack_speed": 0.5,
@@ -154,6 +161,7 @@
             "attribute_2": "Ranger",
             "attribute_3": "",
             "rarity": "R",
+            "draftable": true,
             "energy_cost": 15,
             "attack_speed": 1,
             "attack_damage": 10,
@@ -175,6 +183,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "U",
+            "draftable": true,
             "energy_cost": 12,
             "attack_speed": 1,
             "attack_damage": 5,
@@ -196,6 +205,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "U",
+            "draftable": true,
             "energy_cost": 12,
             "attack_speed": 1,
             "attack_damage": 5,
@@ -209,7 +219,7 @@
             "ability_text": "Units touching Sacral Sermonizer lose all stacks of frenzy.",
             "special_attack": "All enemies within 60px a 50% chance of targeting Sacral Sermonizer, a 25% chance of being inflicted with Weakened for 2s, and a 25% chance of being Immobilized for 2s. This attack only fires when 3+ enemies are within range."
         },
-        "Poison Smuggler": {
+        "Poison_Smuggler": {
             "name": "Poison Smuggler",
             "img": "Poison_Smuggler.png",
             "type": "Unit",
@@ -217,6 +227,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "U",
+            "draftable": true,
             "energy_cost": 10,
             "attack_speed": 1,
             "attack_damage": 5,
@@ -239,6 +250,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 8,
             "attack_speed": 1,
             "attack_damage": 1,
@@ -260,6 +272,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "U",
+            "draftable": true,
             "energy_cost": 14,
             "attack_speed": 1,
             "attack_damage": 10,
@@ -281,6 +294,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 8,
             "special_attack_damage": 200,
             "special_attack_speed": 0.1,
@@ -299,6 +313,7 @@
             "attribute_2": "Wooden",
             "attribute_3": "Goblin",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 15,
             "attack_speed": 1,
             "attack_damage": 10,
@@ -320,6 +335,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "Nerd",
             "rarity": "U",
+            "draftable": true,
             "energy_cost": 12,
             "attack_speed": 1,
             "attack_damage": 10,
@@ -339,6 +355,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "R",
+            "draftable": true,
             "energy_cost": 25,
             "attack_speed": 1,
             "attack_damage": 10,
@@ -359,6 +376,7 @@
             "attribute_2": "Chemist",
             "attribute_3": "",
             "rarity": "U",
+            "draftable": true,
             "energy_cost": 12,
             "attack_speed": 1,
             "attack_damage": 10,
@@ -379,7 +397,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "Angel",
             "rarity": "MR",
-            "not_draftable": true,
+            "draftable": false,
             "attack_speed": 0.5,
             "attack_damage": 100,
             "range": 0,
@@ -398,7 +416,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "Angel",
             "rarity": "MR",
-            "not_draftable": true,
+            "draftable": false,
             "attack_speed": 1,
             "attack_damage": 1,
             "range": 0,
@@ -419,6 +437,7 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "U",
+            "draftable": true,
             "energy_cost": 10,
             "cooldown": 0.5,
             "aoe": 50,
@@ -434,8 +453,10 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 5,
             "cooldown": 0.1,
+            "aoe": 0,
             "ability_text": "Target friendly unit is destroyed by Feed the Pure. Then Feed the Pure inflicts target friendly unit with 4 x frenzy."
         },
         "Chosen_By_Gror": {
@@ -446,9 +467,13 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 5,
             "cooldown": 0.1,
-            "ability_text": "Choses by Gror inflicts target friendly unit with 4 x frenzy."
+            "aoe": 0,
+            "ability_text": "Choses by Gror inflicts target friendly unit with frenzy.",
+            "special_attack": "Goblin Trance Potioneer throws a projectile that inflicts and friendly units with frenzy and deals 20 damage with 20px of knockback in 20px."
+
         },
         "Rebuke_The_Wicked": {
             "name": "Rebuke the Wicked",
@@ -458,8 +483,10 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 5,
             "cooldown": 0.1,
+            "aoe": 50,
             "ability_text": "Target ground. Rebuke the Wicked inflicts all enemy units within 50px with Fear for 4s."
         },
         "Mozzberry_Bloat_Banishment": {
@@ -470,8 +497,10 @@
             "attribute_2": "",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 20,
             "cooldown": 0.1,
+            "aoe": 10,
             "ability_text": "Target ground. A slow moving projectile is fired at that spot from the friendly side of the screen. On impact, heal goblins for 10hp and poison non-goblins within 10 px with 40px of knockback."
         }
     },
@@ -484,9 +513,11 @@
             "attribute_2": "Wooden",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 10,
             "health": 40,
-            "ability_text": "When 3+ units are in front of Rickety Springboard it throws all units standing on it 500px forward, damages them for half thier health, and inflicts frenzy on them."
+            "ability_text": "When 3+ units are in front of Rickety Springboard it throws all units standing on it 500px forward, damages them for half thier health, and inflicts frenzy on them.",
+            "size": 1
         },
         "Holy_Crucible": {
             "name": "Holy Crucible",
@@ -496,9 +527,11 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "R",
+            "draftable": true,
             "energy_cost": 20,
             "health": 60,
-            "ability_text": "Holy Crucible destroys every third unit that passes it. When Holy Crucible is destroyed it creates a Goblin Seraph with health and attack damage equal to the units destroyed by Holy Crucible."
+            "ability_text": "Holy Crucible destroys every third unit that passes it. When Holy Crucible is destroyed it creates a Goblin Seraph with health and attack damage equal to the units destroyed by Holy Crucible.",
+            "size": 2
         },
         "Snort_Machine": {
             "name": "Snort Machine",
@@ -508,9 +541,11 @@
             "attribute_2": "Machine",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 20,
             "health": 80,
-            "ability_text": "When a unit passes by it becomes immobilized for 1s while it uses the Snort Machine. The unit loses 10 health. Then, there is a 3 in 4 chance Snort Machine inflicts it with with frenzy and a 1 in 4 chance that you gain 5 energy. Only one unit can use Snort Machine at a time. Saved and Happy goblins will not use the Snort Machine."
+            "ability_text": "When a unit passes by it becomes immobilized for 1s while it uses the Snort Machine. The unit loses 10 health. Then, there is a 3 in 4 chance Snort Machine inflicts it with with frenzy and a 1 in 4 chance that you gain 5 energy. Only one unit can use Snort Machine at a time. Saved and Happy goblins will not use the Snort Machine.",
+            "size": 1
         },
         "Nook_And_Cranny": {
             "name": "Nook and Cranny",
@@ -520,9 +555,11 @@
             "attribute_2": "Goblin",
             "attribute_3": "",
             "rarity": "U",
+            "draftable": true,
             "energy_cost": 25,
             "health": 30,
-            "ability_text": "When 2+ goblins are in front of Nook and Cranny, two of them will become immobilized and unsubstantial for 2s. After 2 seconds, Nook and Cranny produces a Goblin Guppy. All 3 Nook and Cranny inflicts all 3 units with Happy."
+            "ability_text": "When 2+ goblins are in front of Nook and Cranny, two of them will become immobilized and unsubstantial for 2s. After 2 seconds, Nook and Cranny produces a Goblin Guppy. All 3 Nook and Cranny inflicts all 3 units with Happy.",
+            "size": 1
         },
         "Baptismal_Bog": {
             "name": "Baptismal Bog",
@@ -532,9 +569,11 @@
             "attribute_2": "Goblin",
             "attribute_3": "Water",
             "rarity": "R",
+            "draftable": true,
             "energy_cost": 40,
             "health": 30,
-            "ability_text": "When a goblin passes in front of the center of Baptismal Bog, it inflicts all units in front of Baptismal Bog with Saved. Baptismal Bog can only do this once every 5 seconds."
+            "ability_text": "When a goblin passes in front of the center of Baptismal Bog, it inflicts all units in front of Baptismal Bog with Saved. Baptismal Bog can only do this once every 5 seconds.",
+            "size": 2
         },
         "Lumber_Camp": {
             "name": "Lumber_Camp",
@@ -544,9 +583,11 @@
             "attribute_2": "",
             "attribute_3": "",
             "rarity": "C",
+            "draftable": true,
             "energy_cost": 17,
             "health": 30,
-            "ability_text": "Lumber Camp generates 1 energy per second if 1 or fewer buildings are touching it."
+            "ability_text": "Lumber Camp generates 1 energy per second if 1 or fewer buildings are touching it.",
+            "size": 3
         }
     }
 }

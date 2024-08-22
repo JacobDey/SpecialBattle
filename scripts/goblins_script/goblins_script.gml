@@ -20,10 +20,6 @@ show_debug_message("goblins.json found! :)");
 
         var _struct = json_load(_file_path);
 
-		
-		show_debug_message(_struct.Units.Goblin_Infantry.name);
-		//print_struct(_struct)
-
         
             variable_global_set("goblins", _struct);
         

@@ -24,3 +24,7 @@ card_special_attack = "";
 
 // spell properties
 card_cooldown = 0;
+card_aoe = 0;
+
+// unit and building only properties
+card_size = 0;
