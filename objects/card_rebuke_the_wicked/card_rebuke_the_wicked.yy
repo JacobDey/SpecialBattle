@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_rebuke_the_wicked",
+  "%Name":"card_Rebuke_The_Wicked",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_rebuke_the_wicked",
+  "name":"card_Rebuke_The_Wicked",
   "overriddenProperties":[],
   "parent":{
     "name":"Spells",

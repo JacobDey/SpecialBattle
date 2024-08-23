@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_feed_the_pure",
+  "%Name":"card_Feed_The_Pure",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_feed_the_pure",
+  "name":"card_Feed_The_Pure",
   "overriddenProperties":[],
   "parent":{
     "name":"Spells",

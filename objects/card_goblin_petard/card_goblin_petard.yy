@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_goblin_petard",
+  "%Name":"card_Goblin_Petard",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_goblin_petard",
+  "name":"card_Goblin_Petard",
   "overriddenProperties":[],
   "parent":{
     "name":"Units",

@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_archangel_gikal",
+  "%Name":"card_Archangel_Gikal",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_archangel_gikal",
+  "name":"card_Archangel_Gikal",
   "overriddenProperties":[],
   "parent":{
     "name":"Units",

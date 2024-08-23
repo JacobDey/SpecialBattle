@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_chosen_by_gror",
+  "%Name":"card_Chosen_By_Gror",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_chosen_by_gror",
+  "name":"card_Chosen_By_Gror",
   "overriddenProperties":[],
   "parent":{
     "name":"Spells",

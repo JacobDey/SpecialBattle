@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_lumber_camp",
+  "%Name":"card_Lumber_Camp",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_lumber_camp",
+  "name":"card_Lumber_Camp",
   "overriddenProperties":[],
   "parent":{
     "name":"Buildings",

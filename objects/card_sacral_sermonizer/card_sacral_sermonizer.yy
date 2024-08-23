@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_sacral_sermonizer",
+  "%Name":"card_Sacral_Sermonizer",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_sacral_sermonizer",
+  "name":"card_Sacral_Sermonizer",
   "overriddenProperties":[],
   "parent":{
     "name":"Units",

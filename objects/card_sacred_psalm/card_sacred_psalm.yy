@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_sacred_psalm",
+  "%Name":"card_Sacred_Psalm",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_sacred_psalm",
+  "name":"card_Sacred_Psalm",
   "overriddenProperties":[],
   "parent":{
     "name":"Spells",

@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_goblin_guppy",
+  "%Name":"card_Goblin_Guppy",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_goblin_guppy",
+  "name":"card_Goblin_Guppy",
   "overriddenProperties":[],
   "parent":{
     "name":"Units",

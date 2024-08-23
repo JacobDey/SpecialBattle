@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_mozzberry_bloat_banishment",
+  "%Name":"card_Mozzberry_Bloat_Banishment",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_mozzberry_bloat_banishment",
+  "name":"card_Mozzberry_Bloat_Banishment",
   "overriddenProperties":[],
   "parent":{
     "name":"Spells",

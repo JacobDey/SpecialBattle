@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_bone_javelina",
+  "%Name":"card_Bone_Javelina",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_bone_javelina",
+  "name":"card_Bone_Javelina",
   "overriddenProperties":[],
   "parent":{
     "name":"Units",

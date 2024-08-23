@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_goblin_chieftess",
+  "%Name":"card_Goblin_Chieftess",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_goblin_chieftess",
+  "name":"card_Goblin_Chieftess",
   "overriddenProperties":[],
   "parent":{
     "name":"Units",

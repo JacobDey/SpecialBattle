@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_nook_and_cranny",
+  "%Name":"card_Nook_And_Cranny",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_nook_and_cranny",
+  "name":"card_Nook_And_Cranny",
   "overriddenProperties":[],
   "parent":{
     "name":"Buildings",

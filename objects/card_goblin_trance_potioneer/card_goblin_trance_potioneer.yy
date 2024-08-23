@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"card_goblin_trance_potioneer",
+  "%Name":"card_Goblin_Trance_Potioneer",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"card_goblin_trance_potioneer",
+  "name":"card_Goblin_Trance_Potioneer",
   "overriddenProperties":[],
   "parent":{
     "name":"Units",

@@ -14,4 +14,3 @@ card_ability_text = goblins.Buildings.Baptismal_Bog.ability_text;
 // building properties
 card_health = goblins.Buildings.Baptismal_Bog.health;
 card_size = goblins.Buildings.Baptismal_Bog.size;
-
