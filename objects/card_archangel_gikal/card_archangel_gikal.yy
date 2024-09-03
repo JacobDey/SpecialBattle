@@ -8,8 +8,8 @@
   "name":"card_Archangel_Gikal",
   "overriddenProperties":[],
   "parent":{
-    "name":"Units",
-    "path":"folders/Objects/Cards/Goblins/Units.yy",
+    "name":"zUndraftable_Objects",
+    "path":"folders/Objects/Cards/Goblins/zUndraftable_Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_card_parent",

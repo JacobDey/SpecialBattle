@@ -18,8 +18,8 @@
             "health": 30,
             "move_speed": 50,
             "range": 100,
-            "ability_text": "When Goblin Cartographer reaches the 1/3rd mark of the lane, there is a 66% percent chance that it will teleport friendly units within 50px of it 1/3rd of the lane forward. There is a 34% chance friendly units within 50px will be destroyed.",
-            "special_attack": "Goblin Wicker Man creates a shockwave that travels 20px and does 40 damage with 10px of knockback. This attack can only be made when it has >100hp"
+            "ability_text": "",
+            "special_attack": ""
         },
         "Hobgoblin_Brute": {
             "name": "Hobgoblin Brute",
@@ -296,6 +296,9 @@
             "rarity": "C",
             "draftable": true,
             "energy_cost": 8,
+            "attack_damage": 0,
+            "attack_speed": 0,
+            "range": 0,
             "special_attack_damage": 200,
             "special_attack_speed": 0.1,
             "special_attack_range": 30,
@@ -388,44 +391,6 @@
             "move_speed": 70,
             "ability_text": "When Goblin Trance Potioneer touches a friendly unfrenzied goblin there is a 1 in 3 chance that it will be destroyed and a 2 in 3 chance that it will be inflicted with frenzy.",
             "special_attack": "Goblin Trance Potioneer throws a projectile that inflicts and friendly units with frenzy and deals 20 damage with 20px of knockback in 20px."
-        },
-        "Archangel_Gikal": {
-            "name": "Archangel Gikal",
-            "img": "Archangel_Gikal.png",
-            "type": "Unit",
-            "attribute_1": "Religious",
-            "attribute_2": "Goblin",
-            "attribute_3": "Angel",
-            "rarity": "MR",
-            "draftable": false,
-            "attack_speed": 0.5,
-            "attack_damage": 100,
-            "range": 0,
-            "special_attack_damage": 0,
-            "special_attack_speed": 0,
-            "special_attack_range": 0,
-            "health": 1000,
-            "move_speed": 40,
-            "ability_text": "When Archangel Gikal is summoned all units are Saved, then Archangel Gikal destroys all units."
-        },
-        "Goblin_Seraph": {
-            "name": "Goblin Seraph",
-            "img": "Goblin_Seraph.png",
-            "type": "Unit",
-            "attribute_1": "Religious",
-            "attribute_2": "Goblin",
-            "attribute_3": "Angel",
-            "rarity": "MR",
-            "draftable": false,
-            "attack_speed": 1,
-            "attack_damage": 1,
-            "range": 0,
-            "special_attack_damage": 0,
-            "special_attack_speed": 0,
-            "special_attack_range": 0,
-            "health": 1,
-            "move_speed": 60,
-            "ability_text": "Goblin Seraph's health and attack damage are equal to the sum of the respective stats of the units who entered the Holy Crucible that made it."
         }
     },
     "Spells": {
@@ -588,6 +553,46 @@
             "health": 30,
             "ability_text": "Lumber Camp generates 1 energy per second if 1 or fewer buildings are touching it.",
             "size": 3
+        }
+    },
+    "Undraftable_Objects": {
+        "Archangel_Gikal": {
+            "name": "Archangel Gikal",
+            "img": "Archangel_Gikal.png",
+            "type": "Unit",
+            "attribute_1": "Religious",
+            "attribute_2": "Goblin",
+            "attribute_3": "Angel",
+            "rarity": "MR",
+            "draftable": false,
+            "attack_speed": 0.5,
+            "attack_damage": 100,
+            "range": 0,
+            "special_attack_damage": 0,
+            "special_attack_speed": 0,
+            "special_attack_range": 0,
+            "health": 1000,
+            "move_speed": 40,
+            "ability_text": "When Archangel Gikal is summoned all units are Saved, then Archangel Gikal destroys all units."
+        },
+        "Goblin_Seraph": {
+            "name": "Goblin Seraph",
+            "img": "Goblin_Seraph.png",
+            "type": "Unit",
+            "attribute_1": "Religious",
+            "attribute_2": "Goblin",
+            "attribute_3": "Angel",
+            "rarity": "MR",
+            "draftable": false,
+            "attack_speed": 1,
+            "attack_damage": 1,
+            "range": 0,
+            "special_attack_damage": 0,
+            "special_attack_speed": 0,
+            "special_attack_range": 0,
+            "health": 1,
+            "move_speed": 60,
+            "ability_text": "Goblin Seraph's health and attack damage are equal to the sum of the respective stats of the units who entered the Holy Crucible that made it."
         }
     }
 }

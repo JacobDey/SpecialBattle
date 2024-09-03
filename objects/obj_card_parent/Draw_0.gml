@@ -42,7 +42,7 @@ if (card_type == "Unit") {
 	
 	// only some units have special attacks, this conditional checks if a unit has a special attack
 	// by checking if the attacks speed, damage, and range are all 0.
-	if ((real(card_special_attack_speed) + real(card_special_attack_damage)  + real(card_special_attack_range))==real(0)) {
+	if (!(real(card_special_attack_speed) + real(card_special_attack_damage)  + real(card_special_attack_range))==real(0)) {
 		draw_sprite(spr_special_attack_dmg, image_index, x + 10, y + 72);
 	draw_text_colour(x + 27, y + 70, card_special_attack_damage, c_black, c_black, c_black, c_black, 1);
 	draw_sprite(spr_special_attack_speed, image_index, x + 70, y + 71);
