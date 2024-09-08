@@ -18,9 +18,9 @@
     {"$GMFolder":"","%Name":"Cards","folderPath":"folders/Objects/Cards.yy","name":"Cards","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Goblins","folderPath":"folders/Objects/Cards/Goblins.yy","name":"Goblins","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Buildings","folderPath":"folders/Objects/Cards/Goblins/Buildings.yy","name":"Buildings","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"zUndraftable_Objects","folderPath":"folders/Objects/Cards/Goblins/zUndraftable_Objects.yy","name":"zUndraftable_Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Spells","folderPath":"folders/Objects/Cards/Goblins/Spells.yy","name":"Spells","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Units","folderPath":"folders/Objects/Cards/Goblins/Units.yy","name":"Units","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"zUndraftable_Objects","folderPath":"folders/Objects/Cards/Goblins/zUndraftable_Objects.yy","name":"zUndraftable_Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"zCardParent","folderPath":"folders/Objects/Cards/zCardParent.yy","name":"zCardParent","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"LegacyObjects","folderPath":"folders/Objects/LegacyObjects.yy","name":"LegacyObjects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"MenuButtons","folderPath":"folders/Objects/MenuButtons.yy","name":"MenuButtons","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -47,11 +47,12 @@
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"goblins.json","CopyToMask":-1,"filePath":"datafiles","name":"goblins.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"project-main.code-workspace","CopyToMask":-1,"filePath":"datafiles","name":"project-main.code-workspace","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.1.152",
+    "IDEVersion":"2024.4.0.137",
   },
   "name":"SpecialBattle",
   "resources":[
