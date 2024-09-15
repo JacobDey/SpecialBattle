@@ -12,12 +12,30 @@ var unitNames = variable_struct_get_names(variable_global_get("goblins").Units);
 var buildingNames = variable_struct_get_names(variable_global_get("goblins").Buildings);
 var spellNames = variable_struct_get_names(variable_global_get("goblins").Spells);
 var cardNames = array_concat(unitNames, buildingNames, spellNames);
+var listOfPickedCards = [];
+var p1deck = [];
+var p2deck = [];
+var packNumber = 0;
+var pickNumber = 0;
+
+// the left and right spreads of cards are anchored to these points, for a coming animation
+var leftMasterx = 0;
+var leftMastery = 0;
+var rightMasterx = 954;
+var rightMastery = 0;
 
 // shuffles the array of card names
 var shuffledCardNames = array_shuffle(cardNames)
 
 function draw_8_cards(shuffledCardNames) {
-
+	
+	packNumber = packNumber + 1;
+	
+	if (packNumber != 1) {
+		repeat(8) {
+		    array_shift(shuffledCardNames);
+		}
+	}
 
 // this builds strings that have the same name as the corresponding card object
 // for the first 8 names in the list of card names
@@ -31,43 +49,83 @@ var p2topCard = "card_" + shuffledCardNames[5];
 var p2bottomCard = "card_" + shuffledCardNames[6];
 var p2rightCard = "card_" + shuffledCardNames[7];
 	
-instance_create_layer(0,316,layer_get_id("Instances"),asset_get_index(p1leftCard));
-instance_create_layer(320,0,layer_get_id("Instances"),asset_get_index(p1topCard));
-instance_create_layer(320,632,layer_get_id("Instances"),asset_get_index(p1bottomCard));
-instance_create_layer(640,316,layer_get_id("Instances"),asset_get_index(p1rightCard));
-instance_create_layer(960,316,layer_get_id("Instances"),asset_get_index(p2leftCard));
-instance_create_layer(1280,0,layer_get_id("Instances"),asset_get_index(p2topCard));
-instance_create_layer(1280,632,layer_get_id("Instances"),asset_get_index(p2bottomCard));
-instance_create_layer(1600,316,layer_get_id("Instances"),asset_get_index(p2rightCard));
+var leftMasterx = 0;
+var leftMastery = 0;
+var rightMasterx = 960;
+var rightMastery = 0;
+	
+instance_create_layer(leftMasterx,leftMastery+316,layer_get_id("Instances"),asset_get_index(p1leftCard));
+instance_create_layer(leftMasterx+320,leftMastery+0,layer_get_id("Instances"),asset_get_index(p1topCard));
+instance_create_layer(leftMasterx+320,leftMastery+632,layer_get_id("Instances"),asset_get_index(p1bottomCard));
+instance_create_layer(leftMasterx+640,leftMastery+316,layer_get_id("Instances"),asset_get_index(p1rightCard));
+instance_create_layer(rightMasterx,rightMastery+316,layer_get_id("Instances"),asset_get_index(p2leftCard));
+instance_create_layer(rightMasterx+320,rightMastery+0,layer_get_id("Instances"),asset_get_index(p2topCard));
+instance_create_layer(rightMasterx+320,rightMastery+632,layer_get_id("Instances"),asset_get_index(p2bottomCard));
+instance_create_layer(rightMasterx+640,rightMastery+316,layer_get_id("Instances"),asset_get_index(p2rightCard));
 
-	repeat(8)
-	{
-	    array_shift(shuffledCardNames);
-	}
+	
 	return shuffledCardNames
+}
+
+function betweenPicks() {
+	//used for storing the names of cards as they swap
+	var swap;
+	
+	swap = p1leftCard;
+	p1leftCard = p2leftCard;
+	p2leftCard = swap;
+	
+	swap = p1topCard;
+	p1topCard = p2topCard;
+	p2topCard = swap;
+	
+	swap = p1bottomCard;
+	p1bottomCard = p2bottomCard;
+	p2bottomCard = swap;
+	
+	swap = p1rightCard;
+	p1rightCard = p2rightCard;
+	p2rightCard = swap;
+	
 }
 
 // drawing the card objects
 shuffledCardNames=draw_8_cards(shuffledCardNames);
 
 //function that doesn't draw the cards that already been picked
-function draw_cards_minus_selected_card(shuffledCardNames,listOfPickedCards) {
+function draw_cards_minus_selected_card(shuffledCardNames) {
 
 
 // this builds strings that have the same name as the corresponding card object
 // for the first 8 names in the list of card names
 
-var p1leftCard = "card_" + shuffledCardNames[0];
-var p1topCard = "card_" + shuffledCardNames[1];
-var p1bottomCard = "card_" + shuffledCardNames[2];
-var p1rightCard = "card_" + shuffledCardNames[3];
-var p2leftCard = "card_" + shuffledCardNames[4];
-var p2topCard = "card_" + shuffledCardNames[5];
-var p2bottomCard = "card_" + shuffledCardNames[6];
-var p2rightCard = "card_" + shuffledCardNames[7];
+if (-1 != ds_list_find_index(listOfPickedCards, shuffledCardNames[0])) {
+	instance_create_layer(0,316,layer_get_id("Instances"),asset_get_index(p1leftCard));
+}
+if (-1 != ds_list_find_index(listOfPickedCards, shuffledCardNames[1])) {
+	instance_create_layer(320,0,layer_get_id("Instances"),asset_get_index(p1topCard));
+}
+if (-1 != ds_list_find_index(listOfPickedCards, shuffledCardNames[2])) {
+	var p1bottomCard = "card_" + shuffledCardNames[2];
+}
+if (-1 != ds_list_find_index(listOfPickedCards, shuffledCardNames[3])) {
+	var p1rightCard = "card_" + shuffledCardNames[3];
+}
+if (-1 != ds_list_find_index(listOfPickedCards, shuffledCardNames[4])) {
+	var p2leftCard = "card_" + shuffledCardNames[4];
+}
+if (-1 != ds_list_find_index(listOfPickedCards, shuffledCardNames[5])) {
+	var p2topCard = "card_" + shuffledCardNames[5];
+}
+if (-1 != ds_list_find_index(listOfPickedCards, shuffledCardNames[6])) {
+	var p2bottomCard = "card_" + shuffledCardNames[6];
+}
+if (-1 != ds_list_find_index(listOfPickedCards, shuffledCardNames[7])) {
+	var p2rightCard = "card_" + shuffledCardNames[7];
+}
 	
-instance_create_layer(0,316,layer_get_id("Instances"),asset_get_index(p1leftCard));
-instance_create_layer(320,0,layer_get_id("Instances"),asset_get_index(p1topCard));
+
+
 instance_create_layer(320,632,layer_get_id("Instances"),asset_get_index(p1bottomCard));
 instance_create_layer(640,316,layer_get_id("Instances"),asset_get_index(p1rightCard));
 instance_create_layer(960,316,layer_get_id("Instances"),asset_get_index(p2leftCard));

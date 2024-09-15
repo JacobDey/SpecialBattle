@@ -69,6 +69,61 @@ highlightCards(p1selection,p2selection);
 // work on controller support once you have wifi
 
 if (p1lockedIn != "none" and p2lockedIn != "none") {
+	ds_list_add(listOfPickedCards, p1lockedIn);
+	ds_list_add(listOfPickedCards, p2lockedIn);
+	
+		switch (p1lockedIn)
+	{
+	    case "left":
+	        ds_list_add(p1deck,shuffledCardNames[0])
+	    break;
+
+	    case "up":
+	        ds_list_add(p1deck,shuffledCardNames[1])
+	    break;
+
+	    case "down":
+	        ds_list_add(p1deck,shuffledCardNames[2])
+	    break;
+	
+	    case "right":
+	        ds_list_add(p1deck,shuffledCardNames[3])
+	    break;
+	}
+
+	switch (p2lockedIn)
+	{
+	    case "left":
+	        ds_list_add(p2deck,shuffledCardNames[4])
+	    break;
+
+	    case "up":
+	        ds_list_add(p2deck,shuffledCardNames[5])
+	    break;
+
+	    case "down":
+	        ds_list_add(p2deck,shuffledCardNames[6])
+	    break;
+	
+	    case "right":
+	        ds_list_add(p2deck,shuffledCardNames[7])
+	    break;
+	}
 	
 	//what to do here... hmm... well i thin
+	/*var p1leftCard = "card_" + shuffledCardNames[0];
+var p1topCard = "card_" + shuffledCardNames[1];
+var p1bottomCard = "card_" + shuffledCardNames[2];
+var p1rightCard = "card_" + shuffledCardNames[3];
+var p2leftCard = "card_" + shuffledCardNames[4];
+var p2topCard = "card_" + shuffledCardNames[5];
+var p2bottomCard = "card_" + shuffledCardNames[6];
+var p2rightCard = "card_" + shuffledCardNames[7];*/
 }
+
+//if (no cards are left) {
+//repeat(8)
+//	{
+//	    array_shift(shuffledCardNames);
+//	}
+//}
