@@ -84,6 +84,7 @@
     {"name":"spr_range","order":3,"path":"sprites/spr_range/spr_range.yy",},
     {"name":"spr_rock_big","order":3,"path":"sprites/spr_rock_big/spr_rock_big.yy",},
     {"name":"spr_rock_small","order":4,"path":"sprites/spr_rock_small/spr_rock_small.yy",},
+    {"name":"spr_selectedCardFrame","order":3,"path":"sprites/spr_selectedCardFrame/spr_selectedCardFrame.yy",},
     {"name":"spr_size","order":11,"path":"sprites/spr_size/spr_size.yy",},
     {"name":"spr_special_attack_dmg","order":6,"path":"sprites/spr_special_attack_dmg/spr_special_attack_dmg.yy",},
     {"name":"spr_special_attack_speed","order":7,"path":"sprites/spr_special_attack_speed/spr_special_attack_speed.yy",},

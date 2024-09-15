@@ -123,6 +123,7 @@
     {"id":{"name":"spr_range","path":"sprites/spr_range/spr_range.yy",},},
     {"id":{"name":"spr_rock_big","path":"sprites/spr_rock_big/spr_rock_big.yy",},},
     {"id":{"name":"spr_rock_small","path":"sprites/spr_rock_small/spr_rock_small.yy",},},
+    {"id":{"name":"spr_selectedCardFrame","path":"sprites/spr_selectedCardFrame/spr_selectedCardFrame.yy",},},
     {"id":{"name":"spr_size","path":"sprites/spr_size/spr_size.yy",},},
     {"id":{"name":"spr_special_attack_dmg","path":"sprites/spr_special_attack_dmg/spr_special_attack_dmg.yy",},},
     {"id":{"name":"spr_special_attack_speed","path":"sprites/spr_special_attack_speed/spr_special_attack_speed.yy",},},

@@ -1,30 +1,67 @@
+draw_cards();
+
+// WASD Player 1
+a_key = keyboard_check(ord("A"));
+w_key = keyboard_check(ord("W"));
+d_key = keyboard_check(ord("D"));
+s_key = keyboard_check(ord("S"));
+spacebar = keyboard_check(vk_space);
+lshift = keyboard_check(vk_lshift);
+
+
+if (a_key)
+{
+	p1selection = "left";
+} else if (w_key)
+{
+	p1selection = "up";
+} else if (d_key)
+{
+	p1selection = "right";
+} else if (s_key)
+{
+	p1selection = "down";
+}
+
+
+if (spacebar)
+{
+	p1lockedIn = p1selection;
+} else if (lshift)
+{
+	p1lockedIn = "none";
+}
+
+// Arrow Keys Player 2
 
 left_cursor = keyboard_check(vk_left);
-if (left_cursor)
-{
-	var p1selection = "left";
-//var p2selection = "none";
-}
-
-var up_cursor;
 up_cursor = keyboard_check(vk_up);
-if (up_cursor)
-{
-	motion_add(image_angle, 0.1);
-}
-
-var right_cursor;
 right_cursor = keyboard_check(vk_right);
-if (right_cursor)
-{
-	image_angle += -4;
-}
+down_cursor = keyboard_check(vk_down);
+n_key = keyboard_check(ord("N"));
+m_key = keyboard_check(ord("M"));
 
-var left_cursor;
-left_cursor = mouse_check_button_pressed(mb_left);
 if (left_cursor)
 {
-	instance_create_layer(x + 0, y + 0, "Instances", bullet);
+	p2selection = "left";
+} else if (up_cursor)
+{
+	p2selection = "up";
+} else if (right_cursor)
+{
+	p2selection = "right";
+} else if (down_cursor)
+{
+	p2selection = "down";
 }
 
-move_wrap(1, 1, 0);
+
+if (n_key)
+{
+	p2lockedIn = p2selection;
+} else if (m_key)
+{
+	p2lockedIn = "none";
+}
+
+highlightCards(p1selection,p2selection);
