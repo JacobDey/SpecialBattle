@@ -1,4 +1,4 @@
-draw_cards();
+//draw_cards();
 
 // WASD Player 1
 a_key = keyboard_check(ord("A"));
@@ -65,3 +65,10 @@ if (n_key)
 }
 
 highlightCards(p1selection,p2selection);
+// next make confirming work
+// work on controller support once you have wifi
+
+if (p1lockedIn != "none" and p2lockedIn != "none") {
+	
+	//what to do here... hmm... well i thin
+}
