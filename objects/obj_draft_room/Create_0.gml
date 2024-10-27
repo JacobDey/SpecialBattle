@@ -5,6 +5,9 @@ function placeholder_goblin(_filename, _value) {
 	file_write_all_text(_filename, _json_content);
 }
 
+// input cooldown timer that prevents double inputs
+input_cooldown = 0;
+
 // drawing the card objects
 
 // building "cardNames", an array of all the card names from the 3 card types
@@ -145,7 +148,7 @@ var timer = 10.01;
 function highlightCards (p1Input, p2Input) {
 	if (p1Input = "left") {
 		draw_sprite(spr_selectedCardFrame,0,-6,310);
-		show_debug_message("attempting to show card frame")
+		//show_debug_message("attempting to show card frame")
 		//drawshape that you're making in paint.net, a large yellow rectngle
 	} else if (p1Input = "up") {
 		draw_sprite(spr_selectedCardFrame,0,314,-6);

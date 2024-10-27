@@ -1,3 +1,8 @@
+if (input_cooldown > 0) 
+{
+	input_cooldown = input_cooldown - 1
+};
+
 // WASD Player 1
 var a_key = keyboard_check(ord("A"));
 var w_key = keyboard_check(ord("W"));
@@ -22,7 +27,7 @@ if (a_key)
 }
 
 
-if (spacebar)
+if (spacebar & (input_cooldown == 0))
 {
 	p1lockedIn = p1selection;
 } else if (lshift)
@@ -54,7 +59,7 @@ if (left_cursor)
 }
 
 
-if (n_key)
+if (n_key & (input_cooldown == 0))
 {
 	p2lockedIn = p2selection;
 } else if (m_key)
@@ -71,6 +76,9 @@ highlightCards(p1selection,p2selection);
 if (p1lockedIn != "none" and p2lockedIn != "none") {
 	ds_list_add(listOfPickedCards, p1lockedIn);
 	ds_list_add(listOfPickedCards, p2lockedIn);
+	
+	// 60 frame delay until another card can be locked in
+	input_cooldown = 60
 
 	
 		switch (p1lockedIn)
@@ -114,8 +122,11 @@ if (p1lockedIn != "none" and p2lockedIn != "none") {
 	
 	var swap;
 	
+	show_debug_message(p1leftCard);
+	
 	swap = p1leftCard;
 	p1leftCard = p2leftCard;
+	show_debug_message(p1leftCard);
 	p2leftCard = swap;
 	
 	swap = p1topCard;
