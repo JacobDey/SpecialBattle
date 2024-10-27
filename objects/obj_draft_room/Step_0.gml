@@ -124,6 +124,7 @@ if (p1lockedIn != "none" and p2lockedIn != "none") {
 	
 	show_debug_message(p1leftCard);
 	
+	show_debug_message("swapping cards??")
 	swap = p1leftCard;
 	p1leftCard = p2leftCard;
 	show_debug_message(p1leftCard);
