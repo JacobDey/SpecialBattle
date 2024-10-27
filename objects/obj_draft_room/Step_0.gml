@@ -121,10 +121,14 @@ if (p1lockedIn != "none" and p2lockedIn != "none") {
 	}
 	
 	var swap;
+<<<<<<< HEAD
 	
 	show_debug_message(p1leftCard);
 	
+=======
 	show_debug_message("swapping cards??")
+	//this part of the code if definetly executing. this is strange
+>>>>>>> cb9a2e7b9919d37f99d200394f131d15317b3374
 	swap = p1leftCard;
 	p1leftCard = p2leftCard;
 	show_debug_message(p1leftCard);
