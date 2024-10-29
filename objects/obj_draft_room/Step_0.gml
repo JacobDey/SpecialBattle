@@ -22,10 +22,10 @@ if (a_key)
 }
 
 
-if (spacebar)
+if (spacebar and timerBetweenPicks == 0)
 {
 	p1lockedIn = p1selection;
-} else if (lshift)
+} else if (lshift and timerBetweenPicks == 0)
 {
 	p1lockedIn = "none";
 }
@@ -54,10 +54,10 @@ if (left_cursor)
 }
 
 
-if (n_key)
+if (n_key and timerBetweenPicks == 0)
 {
 	p2lockedIn = p2selection;
-} else if (m_key)
+} else if (m_key and timerBetweenPicks == 0)
 {
 	p2lockedIn = "none";
 }
@@ -67,28 +67,37 @@ highlightCards(p1selection,p2selection);
 // work on controller support once you have wifi
 
 //var listOfPickedCards = [];
+if (timerBetweenPicks > 0 ) {
+	timerBetweenPicks--;
+}
 
-if (p1lockedIn != "none" and p2lockedIn != "none") {
+if (p1lockedIn != "none" and p2lockedIn != "none" and timerBetweenPicks == 0) {
 	ds_list_add(listOfPickedCards, p1lockedIn);
 	ds_list_add(listOfPickedCards, p2lockedIn);
+	
+	timerBetweenPicks = 120;
 
 	
 		switch (p1lockedIn)
 	{
 	    case "left":
 			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[0]);
+			instance_destroy(asset_get_index(p1leftCard));
 	    break;
 
 	    case "up":
 			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[1]);
+			instance_destroy(asset_get_index(p1topCard));
 	    break;
 
 	    case "down":
 			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[2]);
+			instance_destroy(asset_get_index(p1bottomCard));
 	    break;
 	
 	    case "right":
 			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[3]);
+			instance_destroy(asset_get_index(p1rightCard));
 	    break;
 	}
 
@@ -96,19 +105,23 @@ if (p1lockedIn != "none" and p2lockedIn != "none") {
 	{
 	    case "left":
 			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[4]);
+			instance_destroy(asset_get_index(p2leftCard));
 			//array_insert(p2deck, 0, shuffledCardNames[4]);
 	    break;
 
 	    case "up":
 			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[5]);
+			instance_destroy(asset_get_index(p2topCard));
 	    break;
 
 	    case "down":
 			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[6]);
+			instance_destroy(asset_get_index(p2bottomCard));
 	    break;
 	
 	    case "right":
 			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[7]);
+			instance_destroy(asset_get_index(p2rightCard));
 	    break;
 	}
 	

@@ -12,11 +12,13 @@ var unitNames = variable_struct_get_names(variable_global_get("goblins").Units);
 var buildingNames = variable_struct_get_names(variable_global_get("goblins").Buildings);
 var spellNames = variable_struct_get_names(variable_global_get("goblins").Spells);
 var cardNames = array_concat(unitNames, buildingNames, spellNames);
-listOfPickedCards = ds_list_create();;
+listOfPickedCards = ds_list_create();
 
 // these should be global variables so you can use them in the actual game
 variable_global_set("p1deck", []);
 variable_global_set("p2deck", []);
+
+timerBetweenPicks = 60;
 
 packNumber = 0;
 pickNumber = 0;
