@@ -13,6 +13,9 @@ var buildingNames = variable_struct_get_names(variable_global_get("goblins").Bui
 var spellNames = variable_struct_get_names(variable_global_get("goblins").Spells);
 var cardNames = array_concat(unitNames, buildingNames, spellNames);
 listOfPickedCards = ds_list_create();
+listOfEmptySpacesLeft = ds_list_create();
+listOfEmptySpacesRight = ds_list_create();
+listOfEmptySpacesSwap = ds_list_create();
 
 // these should be global variables so you can use them in the actual game
 variable_global_set("p1deck", []);
@@ -22,6 +25,8 @@ timerBetweenPicks = 60;
 
 packNumber = 0;
 pickNumber = 0;
+
+
 
 // shuffles the array of card names
 shuffledCardNames = array_shuffle(cardNames);
@@ -87,7 +92,7 @@ function draw_cards_minus_selected_card(shuffledCardNames) {
 
 // this builds strings that have the same name as the corresponding card object
 // for the first 8 names in the list of card names
-
+// this function doesn't work
 if (-1 != ds_list_find_index(listOfPickedCards, shuffledCardNames[0])) {
 	instance_create_layer(0,316,layer_get_id("Instances"),asset_get_index(p1leftCard));
 }

@@ -71,33 +71,55 @@ if (timerBetweenPicks > 0 ) {
 	timerBetweenPicks--;
 }
 
-if (p1lockedIn != "none" and p2lockedIn != "none" and timerBetweenPicks == 0) {
-	ds_list_add(listOfPickedCards, p1lockedIn);
-	ds_list_add(listOfPickedCards, p2lockedIn);
+if (p1lockedIn != "none" && p2lockedIn != "none" && timerBetweenPicks == 0 && ds_list_find_index(listOfEmptySpacesLeft, p1lockedIn) == -1 && ds_list_find_index(listOfEmptySpacesRight, p2lockedIn) == -1 ) {
+	
+	show_debug_message("-1 if p1locked in is in emptyspacesleft, pre-add:" + string(ds_list_find_index(listOfEmptySpacesLeft, p1lockedIn)));
 	
 	timerBetweenPicks = 120;
 
+	ds_list_add(listOfEmptySpacesLeft, p1lockedIn);
+	ds_list_add(listOfEmptySpacesRight, p2lockedIn);
+	
+	show_debug_message("What s the first element in emptyspaceslift post add:" + string(ds_list_find_value(listOfEmptySpacesLeft, 0)));
+	show_debug_message("What p1 locked in:" + p1lockedIn);
+	show_debug_message("-1 if p1locked in is in emptyspacesleft, post add but pre swap:" + string(ds_list_find_index(listOfEmptySpacesLeft, p1lockedIn)));
+	
+	// Copy contents of ds_01 to ds_02
+	ds_list_copy(listOfEmptySpacesSwap, listOfEmptySpacesLeft);
+	ds_list_copy(listOfEmptySpacesLeft, listOfEmptySpacesRight);
+	ds_list_copy(listOfEmptySpacesRight, listOfEmptySpacesSwap);
+	
+		show_debug_message("What s the first element in emptyspaceslift:" + string(ds_list_find_value(listOfEmptySpacesLeft, 0)));
+	show_debug_message("What p1 locked in:" + p1lockedIn);
+	show_debug_message("-1 if p1locked in is in emptyspacesleft, post add and post swap:" + string(ds_list_find_index(listOfEmptySpacesLeft, p1lockedIn)));
+	
 	
 		switch (p1lockedIn)
 	{
 	    case "left":
 			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[0]);
 			instance_destroy(asset_get_index(p1leftCard));
+			ds_list_add(listOfPickedCards, shuffledCardNames[0]);
 	    break;
 
 	    case "up":
 			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[1]);
 			instance_destroy(asset_get_index(p1topCard));
+			ds_list_add(listOfPickedCards, shuffledCardNames[1]);
 	    break;
 
 	    case "down":
 			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[2]);
 			instance_destroy(asset_get_index(p1bottomCard));
+			ds_list_add(listOfPickedCards, shuffledCardNames[2]);
 	    break;
 	
 	    case "right":
 			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[3]);
 			instance_destroy(asset_get_index(p1rightCard));
+			ds_list_add(listOfPickedCards, shuffledCardNames[3]);
+			// use ds_list_find_index() and ds_list_add() to add p1right to a list
+			// and then check if the players selection is valid
 	    break;
 	}
 
@@ -106,22 +128,26 @@ if (p1lockedIn != "none" and p2lockedIn != "none" and timerBetweenPicks == 0) {
 	    case "left":
 			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[4]);
 			instance_destroy(asset_get_index(p2leftCard));
+			ds_list_add(listOfPickedCards, shuffledCardNames[4]);
 			//array_insert(p2deck, 0, shuffledCardNames[4]);
 	    break;
 
 	    case "up":
 			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[5]);
 			instance_destroy(asset_get_index(p2topCard));
+			ds_list_add(listOfPickedCards, shuffledCardNames[5]);
 	    break;
 
 	    case "down":
 			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[6]);
 			instance_destroy(asset_get_index(p2bottomCard));
+			ds_list_add(listOfPickedCards, shuffledCardNames[6]);
 	    break;
 	
 	    case "right":
 			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[7]);
 			instance_destroy(asset_get_index(p2rightCard));
+			ds_list_add(listOfPickedCards, shuffledCardNames[7]);
 	    break;
 	}
 	
