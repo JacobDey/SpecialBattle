@@ -153,7 +153,11 @@ if (p1lockedIn != "none" && p2lockedIn != "none" && timerBetweenPicks == 0 && ds
 	
 	var swap;
 	show_debug_message("swapping cards??")
-	//this part of the code if definetly executing. this is strange
+	//turn this from swapping these things to swapping thier positions. just have a variable that toggles
+	//	asset_get_index(p1bottomCard).x = 1;
+	//asset_get_index(p1bottomCard).y = 1;
+	// if (cardsSwappedFromOriginalPositions = false) { etc
+	// cardsSwappedFromOriginalPositions = false currently exists you don't have to create this variables
 	swap = p1leftCard;
 	p1leftCard = p2leftCard;
 	p2leftCard = swap;

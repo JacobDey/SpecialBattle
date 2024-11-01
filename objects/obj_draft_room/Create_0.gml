@@ -16,6 +16,7 @@ listOfPickedCards = ds_list_create();
 listOfEmptySpacesLeft = ds_list_create();
 listOfEmptySpacesRight = ds_list_create();
 listOfEmptySpacesSwap = ds_list_create();
+cardsSwappedFromOriginalPositions = false;
 
 // these should be global variables so you can use them in the actual game
 variable_global_set("p1deck", []);
