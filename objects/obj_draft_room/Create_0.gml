@@ -5,6 +5,36 @@ function placeholder_goblin(_filename, _value) {
 	file_write_all_text(_filename, _json_content);
 }
 
+/*
+instance_create_layer(leftMasterx,leftMastery+316,layer_get_id("Instances"),asset_get_index(p1leftCard));
+instance_create_layer(leftMasterx+320,leftMastery+0,layer_get_id("Instances"),asset_get_index(p1topCard));
+instance_create_layer(leftMasterx+320,leftMastery+632,layer_get_id("Instances"),asset_get_index(p1bottomCard));
+instance_create_layer(leftMasterx+640,leftMastery+316,layer_get_id("Instances"),asset_get_index(p1rightCard));
+instance_create_layer(rightMasterx,rightMastery+316,layer_get_id("Instances"),asset_get_index(p2leftCard));
+instance_create_layer(rightMasterx+320,rightMastery+0,layer_get_id("Instances"),asset_get_index(p2topCard));
+instance_create_layer(rightMasterx+320,rightMastery+632,layer_get_id("Instances"),asset_get_index(p2bottomCard));
+instance_create_layer(rightMasterx+640,rightMastery+316,layer_get_id("Instances"),asset_get_index(p2rightCard));
+
+*/
+
+	// the left and right spreads of cards are anchored to these points, for a coming animation
+	
+leftMasterx = 0;
+leftMastery = 0;
+rightMasterx = 960;
+rightMastery = 0;
+
+cardPlaceCoordinateArray = [
+	[leftMasterx+320,leftMastery],
+	[leftMasterx+640,leftMastery+316],
+	[leftMasterx+320,leftMastery+632],
+	[leftMasterx,leftMastery+316],
+	[rightMasterx+320,rightMastery+0],
+	[rightMasterx+640,rightMastery+316],
+	[rightMasterx+320,rightMastery+632],
+	[rightMasterx,rightMastery+316]
+]
+
 // drawing the card objects
 
 // building "cardNames", an array of all the card names from the 3 card types
@@ -32,21 +62,17 @@ pickNumber = 0;
 // shuffles the array of card names
 shuffledCardNames = array_shuffle(cardNames);
 
-p1leftCard = "card_" + shuffledCardNames[0];
-p1topCard = "card_" + shuffledCardNames[1];
+p1topCard = "card_" + shuffledCardNames[0];
+p1rightCard = "card_" + shuffledCardNames[1];
 p1bottomCard = "card_" + shuffledCardNames[2];
-p1rightCard = "card_" + shuffledCardNames[3];
-p2leftCard = "card_" + shuffledCardNames[4];
-p2topCard = "card_" + shuffledCardNames[5];
+p1leftCard = "card_" + shuffledCardNames[3];
+p2topCard = "card_" + shuffledCardNames[4];
+p2rightCard = "card_" + shuffledCardNames[5];
 p2bottomCard = "card_" + shuffledCardNames[6];
-p2rightCard = "card_" + shuffledCardNames[7];
-	
-	// the left and right spreads of cards are anchored to these points, for a coming animation
-	
-leftMasterx = 0;
-leftMastery = 0;
-rightMasterx = 960;
-rightMastery = 0;
+p2leftCard = "card_" + shuffledCardNames[7];
+
+draftRoomActiveCardsArray = [p1topCard,p1rightCard,p1bottomCard,p1leftCard,p2topCard,p2rightCard,p2bottomCard,p2leftCard]
+//draftRoomActiveCardsArray = ["","","","","","","",p2leftCard]
 
 function draw_8_cards(shuffledCardNames, packNumber) {
 	
@@ -58,18 +84,30 @@ function draw_8_cards(shuffledCardNames, packNumber) {
 		}
 	}
 
-// this builds strings that have the same name as the corresponding card object
-// for the first 8 names in the list of card names
-	
-instance_create_layer(leftMasterx,leftMastery+316,layer_get_id("Instances"),asset_get_index(p1leftCard));
-instance_create_layer(leftMasterx+320,leftMastery+0,layer_get_id("Instances"),asset_get_index(p1topCard));
-instance_create_layer(leftMasterx+320,leftMastery+632,layer_get_id("Instances"),asset_get_index(p1bottomCard));
-instance_create_layer(leftMasterx+640,leftMastery+316,layer_get_id("Instances"),asset_get_index(p1rightCard));
-instance_create_layer(rightMasterx,rightMastery+316,layer_get_id("Instances"),asset_get_index(p2leftCard));
-instance_create_layer(rightMasterx+320,rightMastery+0,layer_get_id("Instances"),asset_get_index(p2topCard));
-instance_create_layer(rightMasterx+320,rightMastery+632,layer_get_id("Instances"),asset_get_index(p2bottomCard));
-instance_create_layer(rightMasterx+640,rightMastery+316,layer_get_id("Instances"),asset_get_index(p2rightCard));
+	p1topCard = "card_" + shuffledCardNames[0];
+	p1rightCard = "card_" + shuffledCardNames[1];
+	p1bottomCard = "card_" + shuffledCardNames[2];
+	p1leftCard = "card_" + shuffledCardNames[3];
+	p2topCard = "card_" + shuffledCardNames[4];
+	p2rightCard = "card_" + shuffledCardNames[5];
+	p2bottomCard = "card_" + shuffledCardNames[6];
+	p2leftCard = "card_" + shuffledCardNames[7];
 
+	show_debug_message(p1leftCard);
+	show_debug_message(p1topCard);
+	
+	// this builds strings that have the same name as the corresponding card object
+	// for the first 8 names in the list of card names
+	
+	instance_create_layer(leftMasterx+320,leftMastery+0,layer_get_id("Instances"),asset_get_index(p1topCard));
+	instance_create_layer(leftMasterx+640,leftMastery+316,layer_get_id("Instances"),asset_get_index(p1rightCard));
+	instance_create_layer(leftMasterx+320,leftMastery+632,layer_get_id("Instances"),asset_get_index(p1bottomCard));
+	instance_create_layer(leftMasterx,leftMastery+316,layer_get_id("Instances"),asset_get_index(p1leftCard));
+	instance_create_layer(rightMasterx+320,rightMastery+0,layer_get_id("Instances"),asset_get_index(p2topCard));
+	instance_create_layer(rightMasterx+640,rightMastery+316,layer_get_id("Instances"),asset_get_index(p2rightCard));
+	instance_create_layer(rightMasterx+320,rightMastery+632,layer_get_id("Instances"),asset_get_index(p2bottomCard));
+	instance_create_layer(rightMasterx,rightMastery+316,layer_get_id("Instances"),asset_get_index(p2leftCard));
+	
 	var result = [shuffledCardNames, packNumber]
 	return result; 
 }
@@ -132,22 +170,6 @@ p2lockedIn = "none";
 
 // pick timer
 var timer = 10.01;
-
-//// player 1 keyboard controls
-//var a_key;
-//var w_key;
-//var d_key;
-//var s_key;
-//var spacebar;
-//var lshift;
-
-//// player 2 keyboard controls
-//var left_cursor;
-//var up_cursor;
-//var right_cursor;
-//var down_cursor;
-//var n_key;
-//var m_key;
 
 // highlight the cards the players have selected
 function highlightCards (p1Input, p2Input) {

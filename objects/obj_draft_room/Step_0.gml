@@ -63,116 +63,181 @@ if (n_key and timerBetweenPicks == 0)
 }
 
 highlightCards(p1selection,p2selection);
-// next make confirming work
-// work on controller support once you have wifi
 
-//var listOfPickedCards = [];
 if (timerBetweenPicks > 0 ) {
 	timerBetweenPicks--;
 }
 
 if (p1lockedIn != "none" && p2lockedIn != "none" && timerBetweenPicks == 0 && ds_list_find_index(listOfEmptySpacesLeft, p1lockedIn) == -1 && ds_list_find_index(listOfEmptySpacesRight, p2lockedIn) == -1 ) {
 	
-	show_debug_message("-1 if p1locked in is in emptyspacesleft, pre-add:" + string(ds_list_find_index(listOfEmptySpacesLeft, p1lockedIn)));
-	
 	timerBetweenPicks = 120;
 
-	ds_list_add(listOfEmptySpacesLeft, p1lockedIn);
-	ds_list_add(listOfEmptySpacesRight, p2lockedIn);
-	
-	show_debug_message("What s the first element in emptyspaceslift post add:" + string(ds_list_find_value(listOfEmptySpacesLeft, 0)));
-	show_debug_message("What p1 locked in:" + p1lockedIn);
-	show_debug_message("-1 if p1locked in is in emptyspacesleft, post add but pre swap:" + string(ds_list_find_index(listOfEmptySpacesLeft, p1lockedIn)));
-	
-	// Copy contents of ds_01 to ds_02
-	ds_list_copy(listOfEmptySpacesSwap, listOfEmptySpacesLeft);
-	ds_list_copy(listOfEmptySpacesLeft, listOfEmptySpacesRight);
-	ds_list_copy(listOfEmptySpacesRight, listOfEmptySpacesSwap);
-	
-		show_debug_message("What s the first element in emptyspaceslift:" + string(ds_list_find_value(listOfEmptySpacesLeft, 0)));
-	show_debug_message("What p1 locked in:" + p1lockedIn);
-	show_debug_message("-1 if p1locked in is in emptyspacesleft, post add and post swap:" + string(ds_list_find_index(listOfEmptySpacesLeft, p1lockedIn)));
-	
-	
 		switch (p1lockedIn)
 	{
+		case "up":
+			if (cardsSwappedFromOriginalPositions = false) {
+				array_insert(variable_global_get("p1deck"), 0, p1topCard);
+				instance_destroy(asset_get_index(p1topCard));
+				draftRoomActiveCardsArray[0] = "";
+				ds_list_add(listOfPickedCards, p1topCard);
+			} else {
+				array_insert(variable_global_get("p1deck"), 0, p2topCard);
+				instance_destroy(asset_get_index(p2topCard));
+				draftRoomActiveCardsArray[4] = "";
+				ds_list_add(listOfPickedCards, p2topCard);
+			}
+	    break;
+		
+		case "right":
+			if (cardsSwappedFromOriginalPositions = false) {
+				array_insert(variable_global_get("p1deck"), 0, p1rightCard);
+				instance_destroy(asset_get_index(p1rightCard));
+				draftRoomActiveCardsArray[1] = "";
+				ds_list_add(listOfPickedCards, p1rightCard);
+			} else {
+				array_insert(variable_global_get("p1deck"), 0, p2rightCard);
+				instance_destroy(asset_get_index(p2rightCard));
+				draftRoomActiveCardsArray[5] = "";
+				ds_list_add(listOfPickedCards, p2rightCard);
+			}
+	    break;
+		
+		case "down":
+			if (cardsSwappedFromOriginalPositions = false) {
+				array_insert(variable_global_get("p1deck"), 0, p1bottomCard);
+				instance_destroy(asset_get_index(p1bottomCard));
+				draftRoomActiveCardsArray[2] = "";
+				ds_list_add(listOfPickedCards, p1bottomCard);
+			} else {
+				array_insert(variable_global_get("p1deck"), 0, p2bottomCard);
+				instance_destroy(asset_get_index(p2bottomCard));
+				draftRoomActiveCardsArray[6] = "";
+				ds_list_add(listOfPickedCards, p2bottomCard);
+			}
+			
+	    break;
+		
 	    case "left":
-			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[0]);
-			instance_destroy(asset_get_index(p1leftCard));
-			ds_list_add(listOfPickedCards, shuffledCardNames[0]);
-	    break;
-
-	    case "up":
-			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[1]);
-			instance_destroy(asset_get_index(p1topCard));
-			ds_list_add(listOfPickedCards, shuffledCardNames[1]);
-	    break;
-
-	    case "down":
-			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[2]);
-			instance_destroy(asset_get_index(p1bottomCard));
-			ds_list_add(listOfPickedCards, shuffledCardNames[2]);
-	    break;
-	
-	    case "right":
-			array_insert(variable_global_get("p1deck"), 0, shuffledCardNames[3]);
-			instance_destroy(asset_get_index(p1rightCard));
-			ds_list_add(listOfPickedCards, shuffledCardNames[3]);
-			// use ds_list_find_index() and ds_list_add() to add p1right to a list
-			// and then check if the players selection is valid
+			if (cardsSwappedFromOriginalPositions = false) {
+				array_insert(variable_global_get("p1deck"), 0, p1leftCard);
+				instance_destroy(asset_get_index(p1leftCard));
+				draftRoomActiveCardsArray[3] = "";
+				ds_list_add(listOfPickedCards, p1leftCard);
+			} else {
+				array_insert(variable_global_get("p1deck"), 0, p2leftCard);
+				instance_destroy(asset_get_index(p2leftCard));
+				draftRoomActiveCardsArray[7] = "";
+				ds_list_add(listOfPickedCards, p2leftCard);
+			}
+			
 	    break;
 	}
 
 	switch (p2lockedIn)
 	{
+		
+		case "up":
+			if (cardsSwappedFromOriginalPositions = false) {
+				array_insert(variable_global_get("p2deck"), 0, p2topCard);
+				instance_destroy(asset_get_index(p2topCard));
+				draftRoomActiveCardsArray[4] = "";
+				ds_list_add(listOfPickedCards, p2topCard);
+			} else {
+				array_insert(variable_global_get("p2deck"), 0, p1topCard);
+				instance_destroy(asset_get_index(p1topCard));
+				draftRoomActiveCardsArray[0] = "";
+				ds_list_add(listOfPickedCards, p1topCard);
+			}
+			
+	    break;
+		
+		case "right":
+			if (cardsSwappedFromOriginalPositions = false) {
+				array_insert(variable_global_get("p2deck"), 0, p2rightCard);
+				instance_destroy(asset_get_index(p2rightCard));
+				draftRoomActiveCardsArray[5] = "";
+				ds_list_add(listOfPickedCards, p2rightCard);
+			} else {
+				array_insert(variable_global_get("p2deck"), 0, p1rightCard);
+				instance_destroy(asset_get_index(p1rightCard));
+				draftRoomActiveCardsArray[1] = "";
+				ds_list_add(listOfPickedCards, p1rightCard);
+			}
+			
+	    break;
+
+		case "down":
+			if (cardsSwappedFromOriginalPositions = false) {
+				array_insert(variable_global_get("p2deck"), 0, p2bottomCard);
+				instance_destroy(asset_get_index(p2bottomCard));
+				draftRoomActiveCardsArray[6] = "";
+				ds_list_add(listOfPickedCards, p2bottomCard);
+			} else {
+				array_insert(variable_global_get("p2deck"), 0, p1bottomCard);
+				instance_destroy(asset_get_index(p1bottomCard));
+				draftRoomActiveCardsArray[2] = "";
+				ds_list_add(listOfPickedCards, p1bottomCard);
+			}
+			
+	    break;
+		
 	    case "left":
-			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[4]);
-			instance_destroy(asset_get_index(p2leftCard));
-			ds_list_add(listOfPickedCards, shuffledCardNames[4]);
-			//array_insert(p2deck, 0, shuffledCardNames[4]);
-	    break;
-
-	    case "up":
-			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[5]);
-			instance_destroy(asset_get_index(p2topCard));
-			ds_list_add(listOfPickedCards, shuffledCardNames[5]);
-	    break;
-
-	    case "down":
-			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[6]);
-			instance_destroy(asset_get_index(p2bottomCard));
-			ds_list_add(listOfPickedCards, shuffledCardNames[6]);
-	    break;
-	
-	    case "right":
-			array_insert(variable_global_get("p2deck"), 0, shuffledCardNames[7]);
-			instance_destroy(asset_get_index(p2rightCard));
-			ds_list_add(listOfPickedCards, shuffledCardNames[7]);
+			if (cardsSwappedFromOriginalPositions = false) {
+				array_insert(variable_global_get("p2deck"), 0, p2leftCard);
+				instance_destroy(asset_get_index(p2leftCard));
+				draftRoomActiveCardsArray[7] = "";
+				ds_list_add(listOfPickedCards, p2leftCard);
+			} else {
+				array_insert(variable_global_get("p2deck"), 0, p1leftCard);
+				instance_destroy(asset_get_index(p1leftCard));
+				draftRoomActiveCardsArray[3] = "";
+				ds_list_add(listOfPickedCards, p1leftCard);
+			}
 	    break;
 	}
+
+	 if (cardsSwappedFromOriginalPositions = false) 
+	 {
+		 
+		 for (i = 0; i < 8; i++) {
+			 show_debug_message(i);
+			 
+			 if (draftRoomActiveCardsArray[i] != "") {
+				if (i <= 3) {
+					asset_get_index(draftRoomActiveCardsArray[i]).x = cardPlaceCoordinateArray[i+4][0];
+					asset_get_index(draftRoomActiveCardsArray[i]).y = cardPlaceCoordinateArray[i+4][1];
+				} else {
+					asset_get_index(draftRoomActiveCardsArray[i]).x = cardPlaceCoordinateArray[i-4][0];
+					asset_get_index(draftRoomActiveCardsArray[i]).y = cardPlaceCoordinateArray[i-4][1];
+				}
+			 }
+			 show_debug_message(draftRoomActiveCardsArray[i]);
+		 }
+		 
+		 cardsSwappedFromOriginalPositions = true;
+		 
+	 } else { 
+		 
+		 for (i = 0; i < 8; i++) {
+			 show_debug_message(i);
+			 if (draftRoomActiveCardsArray[i] != "") {
+				if (i <= 3) {
+					asset_get_index(draftRoomActiveCardsArray[i]).x = cardPlaceCoordinateArray[i][0];
+					asset_get_index(draftRoomActiveCardsArray[i]).y = cardPlaceCoordinateArray[i][1];
+				} else {
+					asset_get_index(draftRoomActiveCardsArray[i]).x = cardPlaceCoordinateArray[i][0];
+					asset_get_index(draftRoomActiveCardsArray[i]).y = cardPlaceCoordinateArray[i][1];
+				}
+			 }
+		 }
+		 
+		 cardsSwappedFromOriginalPositions = false;
+	 }
 	
-	var swap;
-	show_debug_message("swapping cards??")
-	//turn this from swapping these things to swapping thier positions. just have a variable that toggles
-	//	asset_get_index(p1bottomCard).x = 1;
-	//asset_get_index(p1bottomCard).y = 1;
-	// if (cardsSwappedFromOriginalPositions = false) { etc
-	// cardsSwappedFromOriginalPositions = false currently exists you don't have to create this variables
-	swap = p1leftCard;
-	p1leftCard = p2leftCard;
-	p2leftCard = swap;
-	
-	swap = p1topCard;
-	p1topCard = p2topCard;
-	p2topCard = swap;
-	
-	swap = p1bottomCard;
-	p1bottomCard = p2bottomCard;
-	p2bottomCard = swap;
-	
-	swap = p1rightCard;
-	p1rightCard = p2rightCard;
-	p2rightCard = swap;
+	pickNumber++;
+	if (pickNumber = 4) {
+		draw_8_cards(shuffledCardNames, packNumber);
+	}
 	
 	betweenPicks()
 	
