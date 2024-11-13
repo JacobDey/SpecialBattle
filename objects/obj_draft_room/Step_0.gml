@@ -70,7 +70,7 @@ if (timerBetweenPicks > 0 ) {
 
 if (p1lockedIn != "none" && p2lockedIn != "none" && timerBetweenPicks == 0 && ds_list_find_index(listOfEmptySpacesLeft, p1lockedIn) == -1 && ds_list_find_index(listOfEmptySpacesRight, p2lockedIn) == -1 ) {
 	
-	timerBetweenPicks = 120;
+	timerBetweenPicks = 60;
 
 		switch (p1lockedIn)
 	{
@@ -234,14 +234,19 @@ if (p1lockedIn != "none" && p2lockedIn != "none" && timerBetweenPicks == 0 && ds
 		 cardsSwappedFromOriginalPositions = false;
 	 }
 	
-	pickNumber++;
-	if (pickNumber = 4) {
-		draw_8_cards(shuffledCardNames, packNumber);
-	}
-	
 	betweenPicks()
 	
 	// Resetting Variables
 	p1lockedIn="none"
 	p2lockedIn="none"
+	
+		pickNumber++;
+	if (pickNumber == 4) {
+		if (packNumber == 3) {
+			room_goto(asset_get_index("rm_game"));
+		}
+		draw_8_cards(shuffledCardNames, packNumber);
+		pickNumber=0;
+		packNumber++;
+	}
 }

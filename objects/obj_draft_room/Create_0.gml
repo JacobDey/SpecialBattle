@@ -1,5 +1,8 @@
 // this part is an unused garbage funtion. funtionalize this whole document eventually
 
+//remove this if you don't want it to be random
+//randomize();
+
 function placeholder_goblin(_filename, _value) {
 	var _json_content = json_stringify(_value);
 	file_write_all_text(_filename, _json_content);
@@ -72,7 +75,6 @@ p2bottomCard = "card_" + shuffledCardNames[6];
 p2leftCard = "card_" + shuffledCardNames[7];
 
 draftRoomActiveCardsArray = [p1topCard,p1rightCard,p1bottomCard,p1leftCard,p2topCard,p2rightCard,p2bottomCard,p2leftCard]
-//draftRoomActiveCardsArray = ["","","","","","","",p2leftCard]
 
 function draw_8_cards(shuffledCardNames, packNumber) {
 	
