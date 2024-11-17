@@ -348,7 +348,8 @@
             "special_attack_range": 0,
             "health": 25,
             "move_speed": 50,
-            "ability_text": "When Goblin Cartographer reaches the 1/3rd mark of the lane, there is a 66% percent chance that it will teleport friendly units within 50px of it 1/3rd of the lane forward. There is a 34% chance friendly units within 50px will be destroyed."
+            "ability_text": "When Goblin Cartographer reaches the 1/3rd mark of the lane, there is a 66% percent chance that it will teleport friendly units within 50px of it 1/3rd of the lane forward. There is a 34% chance friendly units within 50px will be destroyed.",
+            "special_attack": ""
         },
         "Goblin_Pope": {
             "name": "Goblin Pope",
@@ -541,7 +542,7 @@
             "size": 2
         },
         "Lumber_Camp": {
-            "name": "Lumber_Camp",
+            "name": "Lumber Camp",
             "img": "Lumber_Camp.png",
             "type": "Building",
             "attribute_1": "Wooden",
@@ -573,7 +574,8 @@
             "special_attack_range": 0,
             "health": 1000,
             "move_speed": 40,
-            "ability_text": "When Archangel Gikal is summoned all units are Saved, then Archangel Gikal destroys all units."
+            "ability_text": "When Archangel Gikal is summoned all units are Saved, then Archangel Gikal destroys all units.",
+            "special_attack": ""
         },
         "Goblin_Seraph": {
             "name": "Goblin Seraph",
@@ -592,7 +594,8 @@
             "special_attack_range": 0,
             "health": 1,
             "move_speed": 60,
-            "ability_text": "Goblin Seraph's health and attack damage are equal to the sum of the respective stats of the units who entered the Holy Crucible that made it."
+            "ability_text": "Goblin Seraph's health and attack damage are equal to the sum of the respective stats of the units who entered the Holy Crucible that made it.",
+            "special_attack": ""
         }
     }
 }

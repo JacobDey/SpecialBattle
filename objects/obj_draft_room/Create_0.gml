@@ -9,6 +9,7 @@ function placeholder_goblin(_filename, _value) {
 }
 
 /*
+it swaps them logically but not graphically on packs 2 and 3
 instance_create_layer(leftMasterx,leftMastery+316,layer_get_id("Instances"),asset_get_index(p1leftCard));
 instance_create_layer(leftMasterx+320,leftMastery+0,layer_get_id("Instances"),asset_get_index(p1topCard));
 instance_create_layer(leftMasterx+320,leftMastery+632,layer_get_id("Instances"),asset_get_index(p1bottomCard));
@@ -94,9 +95,18 @@ function draw_8_cards(shuffledCardNames, packNumber) {
 	p2rightCard = "card_" + shuffledCardNames[5];
 	p2bottomCard = "card_" + shuffledCardNames[6];
 	p2leftCard = "card_" + shuffledCardNames[7];
+	
+	draftRoomActiveCardsArray = [p1topCard,p1rightCard,p1bottomCard,p1leftCard,p2topCard,p2rightCard,p2bottomCard,p2leftCard];
 
-	show_debug_message(p1leftCard);
+	show_debug_message("Print in draw8cards funtion");
 	show_debug_message(p1topCard);
+	show_debug_message(p1rightCard);
+	show_debug_message(p1bottomCard);
+	show_debug_message(p1leftCard);
+	show_debug_message(p2topCard);
+	show_debug_message(p2rightCard);
+	show_debug_message(p2bottomCard);
+	show_debug_message(p2leftCard);
 	
 	// this builds strings that have the same name as the corresponding card object
 	// for the first 8 names in the list of card names

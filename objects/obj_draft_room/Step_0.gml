@@ -243,9 +243,12 @@ if (p1lockedIn != "none" && p2lockedIn != "none" && timerBetweenPicks == 0 && ds
 		pickNumber++;
 	if (pickNumber == 4) {
 		if (packNumber == 3) {
+			pickNumber=0;
+			packNumber=0;
 			room_goto(asset_get_index("rm_game"));
-		}
+		}  else {//make this happen before you draw new cards
 		draw_8_cards(shuffledCardNames, packNumber);
+		}
 		pickNumber=0;
 		packNumber++;
 	}
